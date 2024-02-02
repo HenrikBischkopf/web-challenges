@@ -1,0 +1,11 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "Live Preview",
+      "workspacePath": "c:\\Users\\Henrik\\neuefische\\web-challenges\\css-basics_pink-box",
+      "problemMatcher": [],
+      "label": "Live Preview: Run Server"
+    }
+  ]
+}
