@@ -248,27 +248,24 @@ width, etc. */
 /* --- */
 @media (min-width: 900px) {
   .card-section {
-    /* width: 50%; */
-    /* height: 50%; */
-    /* display: flex; */
-    /* align-items: center; */
-    /* gap: var(--gap); */
     flex-direction: row;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: center;
   }
+
   .product-card {
-    width: 45%;
+    width: calc(50% - var(--gap));
   }
+
   .intro-text {
+    width: calc(50% - var(--gap));
     align-self: flex-start;
-    width: 45%;
   }
 }
 
-/* Media Query Desktop */
 /* --- */
-/* Replace this comment with your media query. */
+
+/* Media Query Desktop */
 /* --- */
 @media (min-width: 1200px) {
   .main-content {
@@ -279,23 +276,17 @@ width, etc. */
 
   .card-section {
     flex-direction: row;
-    justify-content: center;
     flex-wrap: wrap;
-  }
-
-  .--forest {
-    flex-direction: column;
-    width: 99%;
-    height: 400px;
-  }
-
-  .intro-text {
-    width: calc(50% - var(--gap));
-    align-self: self-start;
+    justify-content: center;
   }
 
   .product-card {
     width: calc(50% - var(--gap));
+  }
+
+  .intro-text {
+    width: calc(50% - var(--gap));
+    align-self: flex-start;
   }
 
   .--forest {
@@ -304,3 +295,5 @@ width, etc. */
     height: 400px;
   }
 }
+
+/* --- */
