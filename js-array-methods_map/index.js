@@ -27,7 +27,8 @@ const cards = [
 const lowerCaseAnswers = cards.map((card) => card.answer.toLowerCase()); // ['as often as you like.', ...]
 
 const questionsAndAnswersTogether = cards.map(
-  (card) => `${card.question} - ${card.answer}`
+  (card /* `${card.question} - ${card.answer}` */) =>
+    card.question + " - " + card.answer
 ); // ["How often can I use <header>? - As often as you like.", ...]
 
 const questionAndAnswer = cards.map((card) => ({
