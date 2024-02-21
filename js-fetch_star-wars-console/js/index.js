@@ -10,6 +10,7 @@ async function fetchData() {
   console.log(data);
   console.log(data.results);
   console.log(data.results[2].eye_color);
+ /*  console.log(data.results.find (())) */
   return data;
 }
 
@@ -20,4 +21,4 @@ async function fetchData() {
   } */
 
 fetchData();
-console.log();
+
