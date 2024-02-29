@@ -14,12 +14,28 @@ export default function App() {
   useEffect(() => {
     async function getISSCoords() {
       const response = await fetch(URL);
-      const data = await response.json();
-
-      setCoords(data);
+      if (!response.ok) {
+        console.log("Network error");
+        return null;
+      }
+      try {
+        const data = await response.json();
+        return setCoords(data);
+      } catch (error) {
+        console.error(error);
+        alert("There's a network error");
+        return null;
+      }
     }
-
     getISSCoords();
+
+    const intervalId = setInterval(() => {
+      getISSCoords();
+    }, 5000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
   }, []);
 
   /*  useEffect(() => {
