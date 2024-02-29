@@ -1,15 +1,15 @@
 import "./EntryForm.css";
 import Button from "../Button";
-import React from "react";
 
-export default function EntryForm(onAddEntry) {
-  async function handleSubmit(event) {
+export default function EntryForm({ onAddEntry }) {
+  function handleSubmit(event) {
     event.preventDefault();
-    const response = await fetch(event);
-    const data = await response.json();
-    const newData(data) = { motto: "motto", notes: "notes" };
-    onAddEntry(newData);
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
+    onAddEntry(data);
+    event.target.reset();
   }
+
   return (
     <form className="entry-form" onSubmit={handleSubmit}>
       <h2 className="entry-form__title">New Entry</h2>
