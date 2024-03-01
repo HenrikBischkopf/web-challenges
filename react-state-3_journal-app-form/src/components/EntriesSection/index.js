@@ -7,7 +7,7 @@ import Badge from "../Badge";
 import { Fragment } from "react";
 import { useState } from "react";
 
-const initialEntries = [
+export const initialEntries = [
   {
     id: 1000,
     date: "Feb 5, 2025",
@@ -37,8 +37,7 @@ const initialEntries = [
   },
 ];
 
-export default function EntriesSection() {
-  const [entries, setEntries] = useState(initialEntries);
+export default function EntriesSection({ entries }) {
   return (
     <section className="entries-section">
       <Tabs>
