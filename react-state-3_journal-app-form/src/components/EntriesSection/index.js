@@ -5,7 +5,6 @@ import Tabs from "../Tabs";
 import Tab from "../Tab";
 import Badge from "../Badge";
 import { Fragment } from "react";
-import { useState } from "react";
 
 export const initialEntries = [
   {
