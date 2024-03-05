@@ -33,8 +33,8 @@ export default function Volumes() {
       <h1>The Lord of the Rings</h1>
       <p>{introduction}</p>
       <ul>
-        {volumes.map(({ id, slug, title }) => (
-          <li key={id}>
+        {volumes.map(({ slug, title }) => (
+          <li key={slug}>
             <h1>{title}</h1>
             <Link href={`/volumes/${slug}`}>{title}</Link>
           </li>
