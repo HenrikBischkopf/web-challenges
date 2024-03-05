@@ -16,7 +16,7 @@ export default function Towers() {
   return (
     <>
       <span>
-        <Link href="../volumes">All Volumes</Link>
+        <Link href="../volumes">&lt;- All Volumes</Link>
       </span>
       <h1>{towersVolume.title} </h1>
       <p>{towersVolume.description}</p>

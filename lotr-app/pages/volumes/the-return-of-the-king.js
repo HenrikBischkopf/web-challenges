@@ -18,7 +18,7 @@ export default function King() {
   return (
     <>
       <span>
-        <Link href="../volumes">All Volumes</Link>
+        <Link href="../volumes">&lt;- All Volumes</Link>
       </span>
       <h1>{kingVolume.title} </h1>
       <p>{kingVolume.description}</p>

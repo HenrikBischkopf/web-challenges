@@ -21,7 +21,7 @@ export default function Fellowship() {
   return (
     <>
       <span>
-        <Link href="../volumes">All Volumes</Link>
+        <Link href="../volumes">&lt;- All Volumes</Link>
       </span>
       <h1>{fellowshipVolume.title} </h1>
       <p>{fellowshipVolume.description}</p>
