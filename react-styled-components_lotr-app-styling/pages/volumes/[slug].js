@@ -7,8 +7,6 @@ import ChevronLeft from "../../icons/chevron-left.svg";
 import ArrowLeft from "../../icons/arrow-left.svg";
 import ArrowRight from "../../icons/arrow-right.svg";
 
-let darkMode = false;
-
 const StyledBody = styled.body`
   font: var(--font-body);
   background-color: ${(props) => (props.darkMode ? "black" : "white")};
@@ -59,8 +57,8 @@ export default function VolumeDetail() {
   const { title, description, cover, books, color } = volume;
 
   const toggleDarkMode = () => {
-    darkMode = !darkMode;
-    document.body.classList.toggle("dark-mode", darkMode);
+    const element = document.body;
+    element.classList.toggle("dark-mode");
   };
 
   return (
