@@ -10,17 +10,21 @@ export default function ProductForm() {
     const formData = new FormData(event.target);
     const productData = Object.fromEntries(formData);
 
-    const response = await fetch("/api/products", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(productData),
-    });
+    try {
+      const response = await fetch("/api/products", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(productData),
+      });
 
-    if (response.ok) {
-      mutate();
-      event.target.reset();
+      if (response.ok) {
+        mutate();
+        event.target.reset();
+      }
+    } catch (error) {
+      console.error(error);
     }
   }
 
